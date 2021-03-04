@@ -32,28 +32,146 @@
     <div class="container">
       <!--step2: add first hour time block - time labeled on the left, with input group that can take text -->
       <!--step 2.2: a save button on the right -->
-      <!-- Bootstrap, Components, Input group, Button add ons & Custom select -->
+      <!-- Bootstrap, Components, textarea, Button add ons & Custom select -->
+      <!-- step 3: add color to input -- Bootstrap, Utilities, Colors -->
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label class="input-group-text">Placeholder Hour Time block</label>
+          <label class="input-group-text">9am</label>
         </div>
 
-        <!-- step 3: add color to input -- Bootstrap, Utilities, Colors -->
-        <input 
-        type="text" name="first-block"
-        class="form-control bg-dark" 
-        placeholder="Add to-do" />
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="09"
+        placeholder="Add to-do"></textarea> <!-- the dataset format matters when compared to momentjs -->
+        
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button" 
           name="first-event" id="saveBtn">Save</button>
         </div>
       </div>
 
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">10am</label>
+        </div>
 
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="10"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">11am</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="11"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">12pm</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="12"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">1pm</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="13"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">2pm</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="14"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">3pm</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="15"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">4pm</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="16"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">5pm</label>
+        </div>
+
+        <textarea type="text" 
+        class="form-control bg-dark time-block" data-hour="17"
+        placeholder="Add to-do"></textarea> 
+        
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" 
+          name="first-event" id="saveBtn">Save</button>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="scriptDraft.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
