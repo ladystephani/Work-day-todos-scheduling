@@ -24,13 +24,28 @@ for (var i = 0; i < 9; i++) {
     }
 }
 
-
-//step 4.1: add localStorage. Select input using jQuery.
-var inputEl = $('input[name="first-block"]');//want to use textarea tag instead of input tag (used in forms) to allow for for larger content
-
-$('button[name="first-event"]').on("click", function(event) {
+//step 4.1: add localStorage
+var textEl1 = $('textarea[data-hour="09"]');
+$('button[name="first-timeBlock-event"]').on("click", function(event) {
     event.preventDefault();
-    //console.log("First event", inputEl.val());//somehow only logs on the element.val()
-    localStorage.setItem("firstBlockEvent", inputEl.val());//-- the problem was that localStorage stores key, but doesn't store the input value(doesn't even log to console...)
-
+    //console.log("First event", textEl.val());//somehow only logs on the element.val()
+    localStorage.setItem("timeBlockEvent", textEl1.val());//-- the problem was that localStorage stores key, but doesn't store the input value(doesn't even log to console...)
 })
+
+
+function saved() {
+    var eventContent= localStorage.getItem("timeBlockEvent");
+    textEl1.text(eventContent);//use jQuery .text() here becuz necessary now due to textEl1 is grabbed by jQuery
+    console.log(eventContent);
+    //for (var i = 0; i < 9; i++) {
+        
+    
+
+        
+    //}
+    
+}
+function init(){
+    saved();
+}
+init();
