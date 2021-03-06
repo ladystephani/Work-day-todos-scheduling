@@ -36,37 +36,40 @@ for (var i = 0; i < 9; i++) {
     //console.log(textarea[i]);
 //}
 
-var btn = $('button');//array of button tags
-var textarea = btn.parent().siblings().closest('textarea');
-var keys = [];
-$.each(btn, function() {
-    keys.push($(this).attr("name"));//each button's name
-    //console.log(keys);
-})
-btn.on("click", function(event) {
-    event.preventDefault();
-    //console.log("testing")//don't need loop - each button was added an event handler w/o for loop! jQuery improved on js with .on() method
-    localStorage.setItem( keys, textarea.val() );
-})
+
 //each textarea refers to one row in localStorage
 //then, each textarea is shown the key's related value at the related index
 
-
-
-
-
-
-
-
+var btn = $('button');//array of button tags
+var keys = [];
+var textarea = [];
+var eventContent= [];
+// function save() {
+// }
 
 function saved() {
-    var eventContent= localStorage.getItem("timeBlockEvent");
-    //textarea.text(eventContent);//use jQuery .text() here becuz necessary now due to textEl1 is grabbed by jQuery
-    //console.log(eventContent);
-    
-    
+    $.each(btn, function() {
+        keys.push($(this).attr("name"));//each button's name
+        //console.log(keys);
+        textarea.push($(this).parent().siblings().closest('textarea'));
+    })
+    btn.on("click", function(event) {
+        event.preventDefault();
+        //console.log("testing")//don't need loop - each button was added an event handler w/o for loop! jQuery improved on js with .on() method
+        for (var i =0; i <9; i++) {
+            localStorage.setItem( keys[i], textarea[i].val() );
+            //console.log(keys[i]);
+
+            eventContent.push(localStorage.getItem(keys[i]) );
+            console.log(eventContent[i])
+            // if (textarea[i]) {
+            //     textarea[i].textContent = eventContent[i];
+            // }
+        }
+    })
 }
 function init(){
+    // save();
     saved();
 }
 init();
